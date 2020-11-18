@@ -39,8 +39,24 @@ This dataset is originally from the National Institute of Diabetes and Digestive
 
 
 
-### Age Analysis
-![Alt text](age.png)
+### Screenshot
+![Alt text](images/diabetes.png)
+
+
+## Installation
+- Clone this repository and unzip it.
+
+- After downloading, `cd` into the `Deployment` directory.
+
+- Begin a new virtual environment with Python 3 and activate it.
+
+- Install the required packages using 
+   `pip install -r requirements.txt`
+
+- Execute the command:
+   `python manage.py runserver`
+
+- Open http://127.0.0.1:8000/ in your browser.
 
 ## Guide Lines 
 
@@ -51,12 +67,9 @@ Matplotlib
 Seaborn
 Scikit Learn
 Jupyter Notebook
+Django
 ```
 ### Package Installation
 ```
-pip install numpy
-pip install pandas
-pip install seaborn
-pip install scikit-learn
-pip install matplotlib
+pip3 install -r requirements.txt
 ```
