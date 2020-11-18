@@ -1,0 +1,232 @@
+{% load static %}
+{% csrf_token %}
+<html>
+
+<head>
+<title>{% block title %}Kare.AI{% endblock %}</title>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background: #7f7df9;
+}
+
+.contact-us{
+  width: 250px;
+  background: #fff;
+  padding: 50px;
+  margin: 100px auto;
+  border-radius: 30px;
+  position: relative;
+}
+
+.title h1{
+  color: #535274;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form,
+.form-items{
+  width: 100%;
+}
+
+.form-items .input{
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  background: #ebeef1;
+  border: 0px;
+  outline: none;
+  border-radius: 30px;
+}
+
+.form-items .input.message{
+  height: 125px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding: 15px 15px;
+  resize: none;
+}
+
+.btn{
+  background: #827ffe;
+  text-align: center;
+  color: #fff;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.btn .fas{
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.form-items{
+  position: relative;
+}
+
+.form-items .fas{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #9a99aa;
+}
+
+.social-icons{
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: 200px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons div{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.social-icons div .fab{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+}
+
+.social-icons div.facebook{
+  background: #5178d9;
+}
+
+.social-icons div.twitter{
+  background: #41caf6;
+}
+
+.social-icons div.google{
+  background: #fb4f4f;
+}
+
+</style>
+
+<script>function validateform(){
+
+var Pregnancies=document.form1.Pregnancies.value;
+var Glucose=document.form1.Glucose.value;
+var BloodPressure=document.form1.BloodPressure.value;
+var SkinThickness=document.form1.SkinThickness.value;
+var Insulin=document.form1.Insulin.value;
+var BMI=document.form1.BMI.value;
+var DiabetesPedigreeFunction=document.form1.DiabetesPedigreeFunction.value;
+var Age=document.form1.Age.value;
+
+if (Pregnancies==null || Pregnancies==""){
+  alert("Pregnancies can't be blank");
+  return false;
+}else if (Glucose==null || Glucose==""){
+  alert("Glucose can't be blank");
+  return false;
+  }
+  else if (BloodPressure==null || BloodPressure==""){
+  alert("BloodPressure can't be blank");
+  return false;
+  }
+  else if (SkinThickness==null || SkinThickness==""){
+  alert("SkinThickness can't be blank");
+  return false;
+  }
+  else if (Insulin==null || Insulin==""){
+  alert("Insulin can't be blank");
+  return false;
+  }  else if (BMI==null || BMI==""){
+  alert("BMI can't be blank");
+  return false;
+  }
+  else if (DiabetesPedigreeFunction==null || DiabetesPedigreeFunction==""){
+  alert("DiabetesPedigreeFunction can't be blank");
+  return false;
+  }
+   else (Age==null || Age==""){
+  alert("Age can't be blank");
+  return false;
+  }
+}  </script>
+
+</head>
+<body>
+
+
+
+  <div class="contact-us">
+    <div class="title">
+      <h1>Diabetes Prediction</h1>
+    </div>
+    <div class="form">
+  		<form id="form1" name="form1" method="post", action="/diabetes_pre/" onsubmit=" return validateform()" >
+
+      <div class="form-items">
+        <input type="text" class="input" name="Pregnancies" id="Pregnancies" placeholder="Pregnancies">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="Glucose" id="Glucose" placeholder="Glucose">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="BloodPressure" id="BloodPressure" placeholder="BloodPressure">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="SkinThickness" id="SkinThickness" placeholder="SkinThickness">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="Insulin" id="Insulin" placeholder="Insulin">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="BMI" id="BMI" placeholder="BMI">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction">
+      </div>
+  		<div class="form-items">
+        <input type="text" class="input" name="Age" id="Age" placeholder="Age">
+      </div>
+
+
+    </div>
+<div align="center">
+    <button type="submit" form="form1" value="Submit" class="btn">Submit<i class="fas fa-arrow-right">      </i>
+</button>
+
+    <button  type="reset" form="form1" value="reset" class="btn">Clear<i class="fas fa-arrow-right">     </i>
+</button>
+</div>
+
+
+
+   <br>
+   <br>
+   <br>
+   <br>
+ <center><h1><b>Prediction:</b></h1><h1 color="red"><b>{{ result }}</b></h1>
+</center>
+
+	{% block content %}
+    {% endblock %}
+
+
+</body>
+</html>

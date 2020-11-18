@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Contact Us form</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+</head>
+<body>
+
+
+<div class="contact-us">
+  <div class="title">
+    <h1>Diabetes Prediction</h1>
+  </div>
+  <div class="form">
+		<form id="form1" name="form1" method="post", action="/diabetes_pre/" onsubmit=" return validateform()" >
+
+    <div class="form-items">
+      <input type="text" class="input" name="Pregnancies" id="Pregnancies" placeholder="Pregnancies">
+    </div>
+		<div class="form-items">
+      <input type="text" class="input" name="Glucose" id="Glucose" placeholder="Glucose">
+    </div>
+		<div class="form-items">
+      <input type="text" class="input" name="BloodPressure" id="BloodPressure" placeholder="BloodPressure">
+    </div>
+		<div class="form-items">
+      <input type="text" class="input" name="SkinThickness" id="SkinThickness" placeholder="SkinThickness">
+    </div>
+		<div class="form-items">
+      <input type="text" class="input" name="Insulin" id="Insulin" placeholder="Insulin">
+    </div>
+		<div class="form-items">
+      <input type="text" class="input" name="BMI" id="BMI" placeholder="BMI">
+    </div>
+		<div class="form-items">
+      <input type="text" class="input" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction">
+    </div>
+		<div class="form-items">
+      <input type="text" class="input" name="Age" id="Age" placeholder="Age">
+    </div>
+
+
+  </div>
+
+
+
+  <div class="btn">
+    	<a href="/diabetes_pre/">Sample Button </a>
+    <i class="fas fa-arrow-right"></i>
+
+  </div>
+</form>
+
+
+
+
+</div>
+
+
+</body>
+</html>
